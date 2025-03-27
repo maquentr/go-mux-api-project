@@ -1,21 +1,27 @@
-Run locally
+## Run locally
 
-    Start postgres
-    Prepare environment, fill DB parameters:
+- Start postgres
+- Prepare environment, fill DB parameters:
 
+``` bash
 $ source env-sample
+```
 
-    Build and run:
+- Build and run:
 
+```bash
 $ export GO111MODULE=on
 $ export GOFLAGS=-mod=vendor
 $ go mod download
 $ go build -o go-mux-api.bin
 $ ./go-mux-api.bin
+```
 
 Server is listening on localhost:8010
-Test
 
+## Test
+
+```bash
 $ go test -v
 === RUN   TestEmptyTable
 --- PASS: TestEmptyTable (0.00s)
@@ -31,3 +37,4 @@ $ go test -v
 --- PASS: TestDeleteProduct (0.01s)
 PASS
 ok      _/home/tom/r/go-mux-api 0.034s
+```
